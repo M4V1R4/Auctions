@@ -10,9 +10,9 @@ namespace Models {
             $this->connection = $connection;
         }
 
-        public function login($username, $password)
+        public function login($email, $password)
         {
-            return $this->connection->runQuery('select * from users where username = $1 and password = md5($2)', [$username, $password])[0];
+            return $this->connection->runQuery('select * from users where email = $1 and password = md5($2)', [$email, $password])[0];
         }
 
         public function find($id)

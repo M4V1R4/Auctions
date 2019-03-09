@@ -2,10 +2,10 @@
 require_once './shared/sessions.php';
 require_once './shared/db.php';
 
-$username = $_POST['username'] ?? '';
+$email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 
-$user = $user_model->login($username, $password);
+$user = $user_model->login($email, $password);
 
 if ($user != null) {
     $_SESSION['user_id'] = $user['id'];
@@ -21,20 +21,16 @@ require_once './shared/header.php';
 			</div>
 			<form class="col-12" method="POST">
 			    <div class="form-group">
-			    	<input type="email" class="form-control" placeholder="Correo electrónico" name="username" value="<?=$username?>">
+			    	<input type="email" class="form-control" placeholder="Correo electrónico" name="email" value="<?=$email?>">
 			    </div>
 			    <div>
 			    	<input type="password" class="form-control" placeholder="Contraseña" name="password">
 			    </div>
 			    <br>
 			    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-			    <button type="submit" class="btn btn-secondary">Registrarse</button>    
+			    <a href="/users/register.php" class="btn btn-secondary">Registrarse</a>  
 			</form>
 		</div>
 	</div>
 </div>	
-
-
-
-
 <?php require_once './shared/footer.php' ?>
