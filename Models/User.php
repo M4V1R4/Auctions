@@ -19,6 +19,10 @@ namespace Models {
         {
             return $this->connection->runQuery('select * from users where id = $1', [$id])[0];
         }
+        public function create($first_name, $last_name, $email,$user_type, $password)
+        {
+            $this->connection->runStatement('INSERT INTO users (first_name,last_name,email,user_type,password) VALUES ($1, $2, $3, $4, $5)', [$first_name, $last_name, $email, $user_type, $password]);
+        }
     }
 
 }

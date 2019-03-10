@@ -1,7 +1,3 @@
-<?php
-require_once '../shared/db.php';
-require_once '../shared/header.php';
-?>
 <div class="modal-dialog text-center">
 	<div class="col-sm-8 main-section">
 		<div class="modal-content">
@@ -31,5 +27,3 @@ require_once '../shared/header.php';
 		</div>
 	</div>
 </div>
-
-<?php require_once '../shared/footer.php' ?>

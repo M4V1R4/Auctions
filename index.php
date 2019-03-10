@@ -28,7 +28,7 @@ require_once './shared/header.php';
 			    </div>
 			    <br>
 			    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-			    <a href="/users/register.php" class="btn btn-secondary">Registrarse</a>  
+			    <a href="/users/create.php" class="btn btn-secondary">Registrarse</a>  
 			</form>
 		</div>
 	</div>
