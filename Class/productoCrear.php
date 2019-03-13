@@ -10,5 +10,6 @@
 </head>
 <body>
     <Title>Registrar producto</Title>
+    <label for="indskj"></label>
 </body>
 </html>      
