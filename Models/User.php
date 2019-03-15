@@ -12,16 +12,16 @@ namespace Models {
 
         public function login($email, $password)
         {
-            return $this->connection->runQuery('select * from users where email = $1 and password = md5($2)', [$email, $password])[0];
+            return $this->connection->runQuery('select * from users where email = $1 and password = md5($2)', [$email,$password])[0];
         }
 
         public function find($id)
         {
             return $this->connection->runQuery('select * from users where id = $1', [$id])[0];
         }
-        public function create($first_name, $last_name, $email,$user_type, $password)
+        public function create($first_name, $last_name, $email,$is_admin, $password)
         {
-            $this->connection->runStatement('INSERT INTO users (first_name,last_name,email,user_type,password) VALUES ($1, $2, $3, $4, $5)', [$first_name, $last_name, $email, $user_type, $password]);
+            $this->connection->runStatement('INSERT INTO users (first_name,last_name,email,is_admin,password) VALUES ($1, $2, $3, $4,md5($5))', [$first_name, $last_name, $email, $is_admin, $password]);
         }
     }
 

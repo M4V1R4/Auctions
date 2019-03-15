@@ -2,15 +2,22 @@
 require_once './shared/sessions.php';
 require_once './shared/db.php';
 
+
+
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 
-$user = $user_model->login($email, $password);
-
-if ($user != null) {
-    $_SESSION['user_id'] = $user['id'];
-    return header('Location: /home.php');
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	$user = $user_model->login($email,$password);
+	if ($user != null && $user['is_admin'] == 'f') {
+	    $_SESSION['user_id'] = $user['id'];
+	    return header('Location: /home_buyer.php');
+	}else{
+		$_SESSION['user_id'] = $user['id'];
+	    return header('Location: /home_admin.php');
+	}
 }
+
 require_once './shared/header.php';
 ?>
 <div class="modal-dialog text-center">
