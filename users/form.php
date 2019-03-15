@@ -21,8 +21,8 @@
 				<div class="form-group">
 					    <input type="password" name="password" class="form-control" placeholder="Repetir contraseña" required value="">
 				</div>
-				<button type="submit" class="btn btn-primary">Registrarse</button>
-				<a href="/" class="btn btn-danger">Cancelar</a>
+				<button type="submit" class="class_btn btn btn-primary">Registrarse</button>
+				<a href="/" class="class_a btn btn-danger">Cancelar</a>
 			</form>
 		</div>
 	</div>

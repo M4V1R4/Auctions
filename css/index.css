@@ -23,12 +23,12 @@
 	border-radius: 50%;
 }
 
-button{
+.class_btn{
 	width: 49%;
 	margin: 5px 0 25px;
 }
 
-a{
+.class_a{
 	width: 49%;
 	margin: 5px 0 25px;
 }
