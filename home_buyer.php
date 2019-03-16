@@ -12,6 +12,5 @@ require_once './shared/header.php';
 ?>
 
     <h1>Bienvenido: <?=$user['first_name']?></h1>
-    <a href="/logout.php">Salir</a>
 
 <?php require_once './shared/footer.php' ?>

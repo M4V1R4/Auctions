@@ -34,8 +34,8 @@ require_once './shared/header.php';
 			    	<input type="password" class="form-control" placeholder="Contraseña" name="password">
 			    </div>
 			    <br>
-			    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-			    <a href="/users/create.php" class="btn btn-secondary">Registrarse</a>  
+			    <button type="submit" class="class_btn btn btn-primary">Iniciar Sesión</button>
+			    <a href="/users/create.php" class="class_a btn btn-secondary">Registrarse</a>  
 			</form>
 		</div>
 	</div>
