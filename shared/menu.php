@@ -14,10 +14,10 @@
             <a class="nav-link" href="#">Agregar Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Registar administrador</a>
+            <a class="nav-link" href="../users/create_admin.php">Registar administrador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Crear Subasta</a>
+            <a class="nav-link" href="./auctions/create.php">Crear Subasta</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Ver reportes</a>
