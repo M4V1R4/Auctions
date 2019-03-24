@@ -3,11 +3,17 @@
 require_once '../shared/header.php';
 require_once '../shared/sessions.php';
 
-$description = $_POST['description'] ?? '';
-$id_picture = $_POST['id_picture'] ?? '';
-$id_admin = $_POST['id_admin'] ?? '';
+if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+    return header('Location: /');
+}
 
-$producto = ['description' => $description, 'id_picture' => $id_picture, 'id_admin' => $id_admin];
+$product_id= $product_model->find($_SESSION['user_id']);
+
+$description = $_POST['description'] ?? '';
+$id_picture = $_POST['1'] ?? '';
+$product_id = $_POST['product_id'] ?? '';
+
+$producto = ['description' => $description, 'id_picture' => $id_picture, 'product_id' => $product_id];
 
 	
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -16,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$product_model->create($descripcion, $id_picture, $id_admin);
 	return header('Location: ../index.php');
 }
-
+	
 ?>
 
 
@@ -79,7 +85,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		}
 	</script> 					
 	
-				<button type="submit" class="class_btn btn btn-primary" name="save_task"
+		<button type="submit" class="class_btn btn btn-primary" name="save_task"
 					value="Guardar producto">Guardar producto</button>
 					<a href="../index.php" class="class_a btn btn-danger">Cancelar</a>
                 </form>
