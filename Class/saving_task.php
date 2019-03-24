@@ -1,6 +1,6 @@
 <?php 
 
-if(isset($_POST['saving_task'])){
+if(isset($_POST['savi ng_task'])){
     $title = $_POST['title'];
     $description = $_POST['description'];
 

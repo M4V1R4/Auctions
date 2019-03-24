@@ -1,15 +1,24 @@
-<?php include("header.php")?>
-<?php
-	$title = 'Registro de productos';
+<?php 
 
-	$descripcion = $_POST['descripcion'];
-	$id_picture = $_POST['id_picture'];
-	$id_admin = $_POST['id_admin'];
+require_once '../shared/header.php';
+require_once '../shared/sessions.php';
 
-	$producto = ['descripcion' => $descripcion, 'id_picture' => $id_picture, 'id_admin' => $id_admin];
+$description = $_POST['description'] ?? '';
+$id_picture = $_POST['id_picture'] ?? '';
+$id_admin = $_POST['id_admin'] ?? '';
+
+$producto = ['description' => $description, 'id_picture' => $id_picture, 'id_admin' => $id_admin];
+
 	
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	require_once '../shared/db.php';
+	require 'save_task';
+	$product_model->create($descripcion, $id_picture, $id_admin);
+	return header('Location: ../index.php');
+}
 
 ?>
+
 
 <div class="container p-4">
     <div class="row">
@@ -68,11 +77,11 @@
 		rObj = function (evt) { 
 		   return evt.srcElement ?  evt.srcElement : evt.target;
 		}
-	</script> 
-                    <input type="submit" class="btn btn-success btn-block" name= "save_task"
-                    value="Guardar producto">
-					<input type="submit" class="btn btn-danger btn-block" name= "Cancel"
-                    value="Cancelar">
+	</script> 					
+	
+				<button type="submit" class="class_btn btn btn-primary" name="save_task"
+					value="Guardar producto">Guardar producto</button>
+					<a href="../index.php" class="class_a btn btn-danger">Cancelar</a>
                 </form>
             </div>
 
