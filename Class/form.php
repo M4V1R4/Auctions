@@ -24,3 +24,14 @@
 	   <dt><a href="#" onClick="addCampo()">Subir otro archivo</a></dt>      
 	     </dl>
 	</form> 
+
+    <button type="submit" class="class_btn btn btn-primary" name="save_task"
+					value="Guardar producto">Guardar producto</button>
+					<a href="../index.php" class="class_a btn btn-danger">Cancelar</a>
+                </form>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>
