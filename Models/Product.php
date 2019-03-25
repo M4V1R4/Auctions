@@ -19,5 +19,6 @@ namespace Models {
             $this->connection->runStatement('INSERT INTO users (descripcion, id_picture, id_admin) VALUES ($1, $2, $3)', [$descripcion, $id_picture, $id_admin]);
         }
     }
+                          
 
 }
