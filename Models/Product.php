@@ -28,7 +28,7 @@ namespace Models {
 
         public function update($id, $nombre, $description)
         {
-            $this->connection->runStatement('UPDATE products SET nombre = $2, year = $3 WHERE id = $1', [$id, $nombre, $description]);
+            $this->connection->runStatement('UPDATE products SET nombre = $2, description = $3 WHERE id = $1', [$id, $nombre, $description]);
         }
 
         public function all()
