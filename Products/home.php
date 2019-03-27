@@ -29,3 +29,6 @@ require_once '../shared/db.php';
         ?>
     </table>
 </div>
+
+<?php require_once '../shared/footer.php' ?>
+<script type="text/javascript" src="/public/js/product.js"></script>

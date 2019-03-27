@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container">
     <h1><?=$title?></h1>
 
-    <?php require_once './form.php' ?>
+    <?php require_once './estructura.php' ?>
 </div>
 
 <?php require_once '../shared/footer.php' ?>

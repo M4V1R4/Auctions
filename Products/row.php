@@ -4,7 +4,7 @@
 	<td><?=$product['id_admin']?></td>
 	<td>
 		<div class="action-btn">
-			<a class="btn btn-warning" href="/Products/update.php?id=<?=$product['id']?>">Editar</a>
+			<a class="btn btn-warning" href="/Products/EditProduct.php?id=<?=$product['id']?>">Editar</a>
 			<button class="btn btn-danger delete-btn">Eliminar</button>
 		</div>
 		<div class="hidden-btn d-none">

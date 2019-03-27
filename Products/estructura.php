@@ -8,5 +8,5 @@
         <input type="num" name="Description" class="form-control" required value="<?=$product['description']?>">
     </div>
     <input class="btn btn-primary" type="submit" value="Aceptar">
-    <a href="/cars" class="btn btn-danger">Cancelar</a>
+    <a href="./home.php" class="btn btn-danger">Cancelar</a>
 </form>
