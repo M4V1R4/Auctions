@@ -2,23 +2,23 @@
 
 require_once '../shared/header.php';
 require_once '../shared/sessions.php';
+require_once '../shared/db.php';
 
 //if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
 //    return header('Location: /');
 //}
 
+$nombre = $_POST['nombre'] ?? '';
 $description = $_POST['description'] ?? '';
-$id_picture = $_POST['1'] ?? '';
-$product_id = $_POST['1'] ?? '';
+$user = $user_model->find($_SESSION['user_id']);
 
-$producto = ['description' => $description, 'id_picture' => $id_picture, 'product_id' => $product_id];
+//$producto = ['nombre' => $nombre, 'description' => $description, 'user' => $user];
 
 	
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	require_once '../shared/db.php';
-	$product_model->create($descripcion, $id_picture, $product_id);
-    return header('Location: ../index.php');
-    require "submit";
+	$product_model->create($nombre, $description, $user);
+    return header('Location: index.php');
 }
 	
 ?>

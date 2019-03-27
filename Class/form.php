@@ -1,17 +1,18 @@
 <div class="container p-4">
     <div class="row">
         <div class="col-md-6" >
-                <form action="saving_task.php">
+              <form method="POST">
                     <div class="form-group">
 					<h1>Nombre del producto:</h1>
-                        <input type="text" name="title" class="form-control" 
-                        placeholder="Nombre del producto" autofocus>
+                    <div class="form-group">
+					<input type="text" name="nombre" class="form-control" placeholder="nombre" required value="">
                     </div>
                     <div class="form-group">
 					<h1>Descripcion:</h1>
-                        <textarea name="description" rows="2" class="form-control"
-                        placeholder="Detalles del producto"></textarea>
-                    </div>
+                    <div class="form-group">
+					<input type="text" name="description" class="form-control" placeholder="description" 
+                        required value="">
+				    </div>    
                     <h1>Fotos:</h1>
                     <html>
 	<form name="formu" id="formu" action="upload.php" method="post" enctype="multipart/form-data"
@@ -25,8 +26,7 @@
 	     </dl>
 	</form> 
 
-    <button type="submit" class="class_btn btn btn-primary" name="save_task"
-					value="Guardar producto">Guardar producto</button>
+    <button type="submit" class="class_btn btn btn-primary">Guardar producto</button>
 					<a href="../home_admin.php" class="class_a btn btn-danger">Cancelar</a>
                 </form>
             </div>
