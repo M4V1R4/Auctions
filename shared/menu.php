@@ -11,13 +11,20 @@
       <?php if($user['is_admin'] == 't'){ ?>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Agregar Producto</a>
+            <a class="nav-link" href="#">Ver Producto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../users/create_admin.php">Registar administrador</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./auctions/create.php">Crear Subasta</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Subastas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./auctions/create.php">Crear subasta</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./auctions/index.php">Ver subastas</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Ver reportes</a>

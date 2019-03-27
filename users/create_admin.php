@@ -1,5 +1,5 @@
 <?php
-$title = 'Registro comprador';
+$title = 'Registro administradores';
 require_once '../shared/header.php';
 require_once '../shared/sessions.php';
 

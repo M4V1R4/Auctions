@@ -10,11 +10,11 @@ CREATE TABLE users(
 CREATE TYPE state AS ENUM ('creada', 'proceso', 'finalizada');
 CREATE TABLE auctions(
     id SERIAL NOT NULL PRIMARY KEY,
-    id_product INTEGER NOT NULL,
-    start_date timestamp  NOT NULL,
-    end_date timestamp NOT NULL,
+    start_date date  NOT NULL,
+    end_date date NOT NULL,
     base_amount DOUBLE PRECISION NOT NULL,
-    current_state state
+    current_state state,
+    id_admin INTEGER NOT NULL
 );
 CREATE TABLE pictures(
 	id SERIAL NOT NULL PRIMARY KEY,
@@ -24,8 +24,8 @@ CREATE TABLE pictures(
 
 CREATE TABLE products(
 	id SERIAL NOT NULL PRIMARY KEY,
+	nombre VARCHAR(200) NOT NULL,
 	description VARCHAR(200) NOT NULL,
-	id_picture INTEGER NOT NULL,
 	id_admin INTEGER NOT NULL
 );
 
@@ -38,5 +38,5 @@ CREATE TABLE invoices(
 
 ALTER TABLE auction ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES product;
 ALTER TABLE pictures ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES product;
-ALTER TABLE products ADD CONSTRAINT fk_picture FOREIGN KEY (id_picture) REFERENCES pictures;
 ALTER TABLE invoices ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES product;
+ALTER TABLE auction ADD CONSTRAINT fk_admin FOREIGN KEY (id_admin) REFERENCES users;
