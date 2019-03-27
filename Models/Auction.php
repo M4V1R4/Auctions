@@ -8,9 +8,22 @@ namespace Models {
         {
             $this->connection = $connection;
         }
-        public function create($start_date, $end_date, $base_amount,$current_state)
+
+        public function find($id)
         {
-            $this->connection->runStatement('INSERT INTO auctions (start_date,end_date,base_amount,current_state) VALUES ($1, $2, $3, $4)',[$start_date, $end_date, $base_amount, $current_state]);
+            return $this->connection->runQuery('SELECT * FROM auctions WHERE id = $1', [$id])[0];
+        }
+        public function delete($id)
+        {
+            $this->connection->runStatement('DELETE FROM auctions WHERE id = $1', [$id]);
+        }
+        public function update($id,$start_date, $end_date,$base_amount,$current_state)
+        {
+            $this->connection->runStatement('UPDATE auctions SET start_date = $2, end_date = $3, base_amount = $4,current_state = $5 WHERE id = $1', [$id, $start_date, $end_date,$base_amount,$current_state]);
+        }
+        public function create($start_date, $end_date, $base_amount,$current_state,$id_admin)
+        {
+            $this->connection->runStatement('INSERT INTO auctions (start_date,end_date,base_amount,current_state,id_admin) VALUES ($1, $2, $3, $4, $5)',[$start_date, $end_date, $base_amount, $current_state,$id_admin]);
         }
         public function all($user)
         {
