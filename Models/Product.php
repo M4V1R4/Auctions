@@ -26,9 +26,9 @@ namespace Models {
             $this->connection->runStatement('DELETE FROM products WHERE id = $1', [$id]);
         }
 
-        public function update($id, $brand, $year)
+        public function update($id, $nombre, $description)
         {
-            $this->connection->runStatement('UPDATE cars SET brand = $2, year = $3 WHERE id = $1', [$id, $brand, $year]);
+            $this->connection->runStatement('UPDATE products SET nombre = $2, year = $3 WHERE id = $1', [$id, $nombre, $description]);
         }
 
         public function all()

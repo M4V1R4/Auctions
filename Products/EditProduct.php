@@ -8,13 +8,12 @@ require_once '../shared/guard.php';
 $id    = $_GET['id'] ?? 0;
 $nombre = $_POST['nombre'] ?? '';
 $description  = $_POST['description'] ?? '';
-$id_admin  = $_POST['id_admin'] ?? '';
 
 $product = $product_model->find($id);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $product_model->update($nombre, $description, $id_admin);
-    return header('Location: Products/home.php');
+    $product_model->update($id,$nombre, $description);
+    return header('Location: ./home.php');
 }
 ?>
 

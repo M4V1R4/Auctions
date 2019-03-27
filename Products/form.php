@@ -27,7 +27,7 @@
 	</form> 
 
     <button type="submit" class="class_btn btn btn-primary">Guardar producto</button>
-					<a href="../home_admin.php" class="class_a btn btn-danger">Cancelar</a>
+					<a href="./home.php" class="class_a btn btn-danger">Cancelar</a>
                 </form>
             </div>
 

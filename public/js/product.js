@@ -21,7 +21,7 @@ $(document).ready(function() {
 	$('.accept-btn').click(function(event) {
 		var row = parentRow($(this));
 		var id = row.attr('id');
-		$.post('/cars/delete.php?id=' + id, {}, function(data) {
+		$.post('/Products/deleteProduct.php?id=' + id, {}, function(data) {
 			row.remove();
 		});
 	});

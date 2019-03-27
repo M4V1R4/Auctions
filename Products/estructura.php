@@ -5,7 +5,7 @@
     </div>
     <div class="form-group">
         <label>Descripcion: </label>
-        <input type="num" name="Description" class="form-control" required value="<?=$product['description']?>">
+        <input type="num" name="description" class="form-control" required value="<?=$product['description']?>">
     </div>
     <input class="btn btn-primary" type="submit" value="Aceptar">
     <a href="./home.php" class="btn btn-danger">Cancelar</a>
