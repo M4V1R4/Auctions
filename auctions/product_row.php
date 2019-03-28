@@ -2,7 +2,6 @@
 	<td><?=$product['id']?></td>
 	<td><?=$product['nombre']?></td>
 	<td><?=$product['description']?></td>
-	<!--<td><?//=$product['imagen']?></td>-->
 	<td>
 		<div class="action-btn">
 			<input type="checkbox" name="chk[]" value="<?=$product['id']?>">

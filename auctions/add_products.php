@@ -11,6 +11,7 @@ if(isset($_POST['btn_enviar'])){
         foreach ($array_chk as $products => $id_product) {
             $auction_model->create_auction_products($_GET['id'], $id_product);
         }
+        return header('Location: /auctions');
     }
 }
 ?>
@@ -27,7 +28,6 @@ if(isset($_POST['btn_enviar'])){
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Descripcion</th>
-                <th>Imagen</th>
                 <th>Seleccionar</th>
             </tr>
             <?php
