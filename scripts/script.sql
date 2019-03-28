@@ -34,9 +34,18 @@ CREATE TABLE invoices(
 	id_product INTEGER NOT NULL,
 	amount DOUBLE PRECISION NOT NULL
 );
+create table auction_products(
+	id SERIAL NOT NULL PRIMARY KEY,
+	id_auction INTEGER NOT NULL,
+	id_product INTEGER NOT NULL
+); 
+
 -- Foreign keys
 
 ALTER TABLE auction ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES product;
 ALTER TABLE pictures ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES product;
 ALTER TABLE invoices ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES product;
 ALTER TABLE auction ADD CONSTRAINT fk_admin FOREIGN KEY (id_admin) REFERENCES users;
+ALTER TABLE products ADD CONSTRAINT fk_admin FOREIGN KEY (id_admin) REFERENCES users;
+ALTER TABLE auction_products ADD CONSTRAINT fk_product FOREIGN KEY (id_product) REFERENCES products;
+ALTER TABLE auction_products ADD CONSTRAINT fk_auction FOREIGN KEY (id_auction) REFERENCES auctions;

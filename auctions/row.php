@@ -6,7 +6,7 @@
 	<td><?=$auction['current_state']?></td>
 	<td>
 		<div class="action-btn">
-			<a href="#" class="btn btn-success">Agregar productos</a>
+			<a href="/auctions/add_products.php?id=<?=$auction['id']?>" class="btn btn-success">Agregar productos</a>
 			<a class="btn btn-warning" href="/auctions/update.php?id=<?=$auction['id']?>"><i class="fas fa-edit"></i></a>
 			<button class="btn btn-danger delete-btn"><i class="fas fa-trash-alt"></i></button>
 		</div>

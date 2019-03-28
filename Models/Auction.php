@@ -25,9 +25,16 @@ namespace Models {
         {
             $this->connection->runStatement('INSERT INTO auctions (start_date,end_date,base_amount,current_state,id_admin) VALUES ($1, $2, $3, $4, $5)',[$start_date, $end_date, $base_amount, $current_state,$id_admin]);
         }
+         public function create_auction_products($id_auction, $id_product){
+            $this->connection->runStatement('INSERT INTO auction_products (id_auction,id_product) VALUES ($1, $2)',[$id_auction, $id_product]);
+        }
         public function all($user)
         {
             return $this->connection->runQuery('SELECT * FROM auctions WHERE id_admin =$1',[$user]);
+        }
+        public function all_products($user)
+        {
+            return $this->connection->runQuery('SELECT * FROM products WHERE id_admin =$1',[$user]);
         }
     }
 }
