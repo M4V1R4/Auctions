@@ -5,19 +5,19 @@
 				<div class="form-group row">
 				  <label class="col-2 col-form-label">Fecha de inicio</label>
 				  <div class="col-10">
-				    <input class="form-control" name="start_date" type="date" value="<?=$auction['start_date']?>" required>
+				    <input class="form-control" name="start_date" type="date" value="" required>
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label class="col-2 col-form-label">Fecha limite</label>
 				  <div class="col-10">
-				    <input class="form-control" name="end_date" type="date" value="<?=$auction['end_date']?>" required>
+				    <input class="form-control" name="end_date" type="date" value="" required>
 				  </div>
 				</div>
 				<div class="form-group row">
 					<label  class="col-2 col-form-label">Precio inicial</label>
 					<div class="col-10">
-					<input type="text" name="base_amount" class="form-control" placeholder="Monto base" value="<?=$auction['base_amount']?>" required>
+					<input type="text" name="base_amount" class="form-control" placeholder="Monto base" value="" required>
 					</div>
 				</div>
 				<div class="form-group row">

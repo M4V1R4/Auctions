@@ -12,7 +12,7 @@ $current_state = $_POST['current_state'] ?? '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $user_model->find($_SESSION['user_id']);
     $auction_model->create($start_date, $end_date, $base_amount, $current_state,$user['id']);
-    return header('/auctions/create.php');
+    return header('Location: /auctions/create.php');
 }
 ?>
 <div class="container">
