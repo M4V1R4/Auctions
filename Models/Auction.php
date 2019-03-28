@@ -28,6 +28,16 @@ namespace Models {
          public function create_auction_products($id_auction, $id_product){
             $this->connection->runStatement('INSERT INTO auction_products (id_auction,id_product) VALUES ($1, $2)',[$id_auction, $id_product]);
         }
+        public function all_auction_products($id_auction, $id_product)
+        {
+            return $this->connection->runQuery('select p.id,p.nombre, p.description,
+                        d.id,d.start_date,d.end_date,d.base_amount,d.current_state,
+                        a.id_product, a.id_auction
+                        from products p inner join auction_products a
+                        on p.id = a.id_product
+                        inner join auctions d
+                        on d.id = a.id_auction',[$id_auction,$id_product]);
+        }
         public function all($user)
         {
             return $this->connection->runQuery('SELECT * FROM auctions WHERE id_admin =$1',[$user]);
