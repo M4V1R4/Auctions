@@ -11,7 +11,7 @@
       <?php if($user['is_admin'] == 't'){ ?>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Ver Producto</a>
+            <a class="nav-link" href="Products/home.php">Productos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../users/create_admin.php">Registar administrador</a>
