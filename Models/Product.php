@@ -35,5 +35,11 @@ namespace Models {
         {
             return $this->connection->runQuery('SELECT * FROM products');
         }
+
+        public function create_imagenes_productos($id_producto, $id_imagen){
+            $this->connection->runstatement('INSERT INTO imagenes_productos(id_producto,id_imagen)
+                                                VALUES ($1,$2)',[$id_producto,$id_imagen]);
+        }
+        
     }                 
 }

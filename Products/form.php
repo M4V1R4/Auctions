@@ -20,10 +20,10 @@
 	   <dl>            
 	        <dt><label>Archivos a Subir:</label></dt>
 	        <dd><div id="adjuntos">
-	        <input type="file" name="archivos[]"/><br />
+	        <input type="file" name="archivos[]" class="file" accept="imagen/*" multiple/><br />
 	        </div></dd>
 	   <dt><a href="#" onClick="addCampo()">Subir otro archivo</a></dt>      
-	     </dl>
+	     </dl>  
 	</form> 
 
     <button type="submit" class="class_btn btn btn-primary">Guardar producto</button>
