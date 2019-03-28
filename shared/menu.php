@@ -20,7 +20,7 @@
             <a class="nav-link" href="./auctions/create.php">Crear Subasta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ver reportes</a>
+            <a class="nav-link" href="/Reportes/index.php">Ver reportes</a>
           </li>
         </ul>
         <a class="nav-item nav-link" href="../logout.php">Cerrar Sesión</a>
