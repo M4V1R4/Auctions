@@ -31,7 +31,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://img.peru21.pe/files/article_content_ec_fotos/uploads/2018/12/01/5c02e309f33f3.jpeg" alt="First slide">
+      <img class="d-block w-100" src="" alt="Primera imagen">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="https://img.peru21.pe/files/article_content_ec_fotos/uploads/2018/12/01/5c02e309f33f3.jpeg" alt="Second slide">

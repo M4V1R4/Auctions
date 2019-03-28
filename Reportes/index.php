@@ -25,8 +25,9 @@
         <div id="project">
         <div><span>PROJECT</span>  Website development</div>
         <div><span>CLIENT</span>  Nelson mora</div>
-        <div><span>ADDRESS</span> Naranjo costa rica</div>
-        <div><span>EMAIL</span>nelsonandresmj@gmail.com</div>
+        <div><span>************************************************</div>
+        <div><span>************************************************</div>
+        <div><span>************************************************</div>
         <div><span>************************************************</div>
         </div>
     </header>
