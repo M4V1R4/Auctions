@@ -21,9 +21,9 @@
               Subastas
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="./auctions/create.php">Crear subasta</a>
+              <a class="dropdown-item" href="auctions/create.php">Crear subasta</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="./auctions/index.php">Ver subastas</a>
+              <a class="dropdown-item" href="}auctions/index.php">Ver subastas</a>
             </div>
           </li>
           <li class="nav-item">

@@ -46,6 +46,12 @@ namespace Models {
         {
             return $this->connection->runQuery('SELECT * FROM products WHERE id_admin =$1',[$user]);
         }
+
+        public function all_auction()
+        {
+            return $this->connection->runQuery('SELECT * FROM auctions');
+        }
+
     }
 }
 
