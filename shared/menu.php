@@ -23,11 +23,18 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="auctions/create.php">Crear subasta</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="}auctions/index.php">Ver subastas</a>
+              <a class="dropdown-item" href="auctions/index.php">Ver subastas</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Reportes/index.php">Ver reportes</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Reportes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/Reportes/index.php">Reportes facturacion</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/Reportes/Reporte_subasta.php">Reporte subastas</a>
+            </div>
           </li>
         </ul>
         <a class="nav-item nav-link" href="../logout.php">Cerrar Sesión</a>
